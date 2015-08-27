@@ -1,7 +1,12 @@
-var ResultSearchView = Backbone.View.extend({
+var Backbone = require('backbone');
+var _ = require('lodash');
+var $ = require('jquery');
+
+var template = require('../templates/search-form.hbs');
+
+module.exports = Backbone.View.extend({
     initialize: function(model) {
         this.model = model;
-        this.template = $('#searchFormView').html();
     },
 
     events: {
@@ -22,8 +27,7 @@ var ResultSearchView = Backbone.View.extend({
     },
 
     render: function() {
-        var compiled = _.template(this.template);
-        var html = compiled();
+        var html = template;
         this.$el.html(html);
 
         return this.$el; 
