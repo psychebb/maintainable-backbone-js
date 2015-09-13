@@ -1,16 +1,10 @@
-$(function() {
-    var data = [
-        {
-            "name": "Search results",
-            "description": 'Location description'
-        }
-    ];
+var $ = require('jquery');
+var React = require('react');
+var _ = require('lodash');
 
-    var model = new ResultItem({'results': data});
+var App = require('./compoents/app.jsx');
+var ResultList = require('./compoents/result-list.jsx');
 
-    var searchForm = new ResultSearchView(model);
-    var searchResults = new ResultView(model);
-
-    searchForm.render();
-    searchResults.render();
+$(function () {
+    React.render(<App />, document.getElementById('container'));
 });
