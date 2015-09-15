@@ -11,12 +11,10 @@ module.exports = React.createClass({
 
         return(
         <div className="row">
-            <div id="searchResults" class="large-8 medium-8 columns">
+            <div id="searchResults" className="large-8 medium-8 columns">
                 <h4>Search results</h4>
                 <div id="results">
-                <div class="panel large-12 columns">
                     {locationItems}
-                </div>
                 </div>
             </div>
         </div>

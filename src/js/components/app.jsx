@@ -35,7 +35,7 @@ module.exports = React.createClass({
           <div className="row">
             <div className="large-12 columns">
               <div id="searchLocations">
-                <ResultList datas={this.state.datas}/>
+                <LocationList datas={this.state.datas}/>
               </div>
             </div>
           </div>

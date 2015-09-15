@@ -7,9 +7,9 @@ module.exports = React.createClass({
 
     render: function () {
         return (
-            <div class="panel large-12 columns">
-              <h5>Place of interesting</h5>
-              <h6>Description of the place</h6>
+            <div className="panel large-12 columns">
+              <h5>{this.props.data.name}</h5>
+              <h6>{this.props.data.description}</h6>
               <a href="#" className="toggle button tiny right" onClick={this.handleChange}>
                 {this.props.data.status ? 'Like' : 'Unlike'}
               </a>
